@@ -13,15 +13,15 @@ function App() {
     tl.from("#heart", {
       x: 100,
       rotation: 360,
-      duration: 2,
+      duration: 3,
       ease: "power1.in",
       yoyo: true,
       repeat: 2,
     });
-    tl.from("#heart", {
+    tl.to("#heart", {
       y: 100,
       rotation: 180,
-      duration: 2,
+      duration: 3,
       ease: "power1.out",
       yoyo: true,
       repeat: -1,
@@ -47,6 +47,9 @@ function App() {
       </motion.h1>
       <div id="heart">
         <Heart />
+      </div>
+      <div className=" flex items-center justify-center text-slate-400 drop-shadow-xl text-center bg-amber-100 w-[400px] h-20 rounded-2xl -z-10" style={{ marginTop: "100px" }}>
+        <p>The text animation uses "motion" library formerly framer-motion, while the heart animation uses GSAP.</p>
       </div>
     </div>
   );
