@@ -32,7 +32,7 @@ function Home() {
     <div className="flex flex-col items-center justify-center h-screen">
       <motion.h1
         animate={{
-          scale: [1, 2, 2, 1, 1],
+          scale: [1, 1.5, 1.5, 1, 1],
           rotate: [0, 0, 270, 270, 0],
           transition: {
             duration: 5,
