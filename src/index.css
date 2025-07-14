@@ -19,3 +19,10 @@ footer {
   height: 100px;
   clip-path: path("M50 100 C-60 0 50 -20 50 40 C50 -20 160 0 50 100")
 }
+
+.logo {
+  background-color: oklch(82.8% 0.189 84.429);
+  width: 120px;
+  height: 120px;
+  clip-path: path("M0 60 40 20 60 40 80 20 100 40 60 80 40 60 20 80Z");
+}
