@@ -1,0 +1,21 @@
+@import "tailwindcss";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+footer {
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  color:rgba(184, 184, 36, 0.526);
+}
+
+.heart {
+  background-color:rgba(165, 42, 42, 0.696);
+  width: 100px;
+  height: 100px;
+  clip-path: path("M50 100 C-60 0 50 -20 50 40 C50 -20 160 0 50 100")
+}
