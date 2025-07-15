@@ -49,15 +49,13 @@ function Home() {
         <Heart />
       </div>
       <div
-        className=" flex items-center justify-center text-slate-400 drop-shadow-xl text-center bg-amber-100 w-[400px] h-20 rounded-2xl -z-10"
+        className=" flex items-center justify-center text-sm md:text-lg text-slate-400 drop-shadow-xl text-center bg-amber-100 w-96 h-24 rounded-2xl -z-10"
         style={{ marginTop: "100px" }}
       >
         <p>
           The text animation uses "motion" library formerly framer-motion, while
           the heart animation uses GSAP.
         </p>
-      </div>
-      <div className="text-lg flex text-center items-center justify-center text-violet-400 absolute bottom-0">
       </div>
     </div>
   );

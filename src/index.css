@@ -1,18 +1,5 @@
 @import "tailwindcss";
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-footer {
-  bottom: 0;
-  width: 100%;
-  text-align: center;
-  color:rgba(184, 184, 36, 0.526);
-}
-
 .heart {
   background-color:rgba(165, 42, 42, 0.696);
   width: 100px;
@@ -25,4 +12,11 @@ footer {
   width: 100px;
   height: 100px;
   clip-path: path("M0 60 40 20 60 40 80 20 100 40 60 80 40 60 20 80Z");
+  transform: scale(0.25);
+  transition: color 2s ease-in-out;
+}
+
+.logo:hover {
+  background-color: oklch(74.262% 0.11699 258.299);
+  transition: all 0.4s ease-in-out;
 }

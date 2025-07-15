@@ -8,11 +8,13 @@ interface LayoutProps {
 function Layout({ children }: LayoutProps) {
   return (
     <div className="flex flex-col min-h-screen">
-      <Navbar />
+      <div className="flex items-center justify-center">
+        <Navbar />
+      </div>
       <main className="flex-1 flex flex-col items-center justify-center">
         {children}
       </main>
-      <div className="text-lg flex text-center items-center justify-center text-amber-300">
+      <div className="text-sm md:text-lg flex text-center items-center justify-center text-slate-300">
         <Footer />
       </div>
     </div>
