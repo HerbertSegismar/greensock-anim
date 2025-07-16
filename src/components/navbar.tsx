@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 
 const navbar = () => {
   return (
-    <nav className="w-full h-20 bg-amber-50 flex items-center justify-center fixed top-0 drop-shadow-xl text-lg lg:text-xl text-slate-600 gap-2">
+    <nav className="-top-10 navBG font-semibold bg-gradient-to-r from-white to-amber-200 flex items-center justify-center fixed text-lg lg:text-xl text-slate-700 gap-2 md:gap-8">
       <NavLink to="/">
         <motion.div
           animate={{

@@ -20,3 +20,10 @@
   background-color: oklch(74.262% 0.11699 258.299);
   transition: all 0.4s ease-in-out;
 }
+
+.navBG {
+  width: 600px;
+  height: 170px;
+  clip-path: path("M0 0 600 0 600 70 Q600 120 550 120 270 120 250 170 250 120 0 120Z");
+  transform-origin: center;
+}
