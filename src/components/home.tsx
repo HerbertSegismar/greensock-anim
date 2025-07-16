@@ -29,7 +29,7 @@ function Home() {
   }, [container]);
 
   return (
-    <div className="flex flex-col items-center justify-center h-screen">
+    <div className="flex flex-col items-center justify-center h-screen z-50">
       <motion.h1
         animate={{
           scale: [1, 1.5, 1.5, 1, 1],
@@ -49,7 +49,7 @@ function Home() {
         <Heart />
       </div>
       <div
-        className=" flex items-center justify-center text-sm md:text-lg text-slate-400 drop-shadow-xl text-center bg-amber-100 w-96 h-24 rounded-2xl -z-10"
+        className=" flex items-center justify-center text-sm md:text-lg text-slate-300 drop-shadow-xl text-center bg-purple-900/40 w-96 h-24 rounded-2xl"
         style={{ marginTop: "100px" }}
       >
         <p>
