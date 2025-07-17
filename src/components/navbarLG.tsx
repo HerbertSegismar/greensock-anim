@@ -4,11 +4,11 @@ import { NavLink } from "react-router-dom";
 
 const navbar = () => {
   return (
-    <nav className="-top-10 navBG font-semibold bg-gradient-to-r from-white/0 to-amber-200/20 flex items-center justify-center fixed text-lg lg:text-xl text-slate-300 gap-2 md:gap-8 z-10">
+    <nav className="-top-15 navLG font-semibold bg-gradient-to-r from-white/0 to-amber-200/20 hidden lg:flex items-center justify-center fixed text-2xl text-slate-300 gap-10 z-10">
       <NavLink to="/">
         <motion.div
           animate={{
-            scale: [0.4, 0.3, 0.4],
+            scale: [0.6, 0.4, 0.6],
             transition: { duration: 2, repeat: Infinity },
           }}
           className="logo -mx-4"

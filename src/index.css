@@ -43,6 +43,9 @@
     }
   }
 }
+.project-yellow {
+  color: oklch(82.8% 0.189 84.429);
+}
 
 .heart {
   background-color:rgba(165, 42, 42, 0.696);
@@ -65,9 +68,16 @@
   transition: all 0.4s ease-in-out;
 }
 
-.navBG {
+.navMD {
   width: 600px;
   height: 170px;
   clip-path: path("M0 0 600 0 600 70 Q600 120 550 120 270 120 250 170 250 120 0 120Z");
+  transform-origin: center;
+}
+
+.navLG {
+  width: 1200px;
+  height: 220px;
+  clip-path: path("M0 0 1200 0 1200 70 Q1200 150 1090 150 570 150 550 220 550 150 0 150Z");
   transform-origin: center;
 }
