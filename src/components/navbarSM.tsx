@@ -90,7 +90,7 @@ const Navbar = () => {
                 x: "-100%",
                 transition: { duration: 0.3, ease: "easeInOut" },
               }}
-              className="fixed top-0 left-0 w-3/4 h-full bg-black/90 z-50 pt-20"
+              className="fixed top-0 left-0 w-3/4 h-full bg-black/80 z-50 pt-20"
             >
               <div className="h-full flex flex-col">
                 <motion.div
