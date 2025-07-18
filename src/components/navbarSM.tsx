@@ -102,9 +102,9 @@ const Navbar = () => {
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   transition={{ delay: 0.3 }}
-                  className="bottom-2 fixed text-center w-full px-4"
+                  className="bottom-2 fixed text-center w-full px-4 text-xs"
                 >
-                  <Footer />
+                  <Footer/>
                 </motion.div>
               </div>
             </div>
