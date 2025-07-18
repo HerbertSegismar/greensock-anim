@@ -1,5 +1,5 @@
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
-import { motion } from "motion/react";
+import { AnimatePresence, motion } from "framer-motion"; // Fixed import from "framer-motion"
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import NavbarData from "./navbardata";
@@ -25,12 +25,12 @@ const Navbar = () => {
             <div>
               {!open ? (
                 <Bars3Icon
-                  className="size-8 text-amber-300 cursor-pointer"
+                  className="size-8 text-amber-300 cursor-pointer hover:scale-110 transition-transform"
                   onClick={() => setOpen(true)}
                 />
               ) : (
                 <XMarkIcon
-                  className="size-8 text-amber-300 cursor-pointer"
+                  className="size-8 text-amber-300 cursor-pointer hover:scale-110 transition-transform"
                   onClick={() => setOpen(false)}
                 />
               )}
@@ -39,43 +39,78 @@ const Navbar = () => {
         </NavLink>
       </nav>
 
-      {/* Overlay - separate from the clipped navbar */}
-      {open && (
-        <motion.div
-          initial={{ opacity: 0, x: -300 }}
-          animate={{ opacity: 1, x: 0 }}
-          exit={{ opacity: 0, x: -300 }}
-          className="fixed top-0 left-0 w-3/4 h-full bg-black/90 bg-opacity-90 z-50 pt-20"
-        >
+      {/* Overlay with proper exit animations */}
+      <AnimatePresence>
+        {open && (
           <motion.div
+            key="navbar-overlay"
+            initial={{ opacity: 0, x: "-100%" }}
             animate={{
-              scale: [0.8, 0.3, 0.8],
-              transition: { duration: 2, repeat: Infinity },
+              opacity: 1,
+              x: 0,
+              transition: { type: "spring", stiffness: 300, damping: 25 },
             }}
-            className="logo place-self-center"
-          />
-          <div className="flex flex-col items-center justify-start gap-8 h-full">
-            {NavbarData.map((link) => (
-              <NavLink
-                className={({ isActive }) =>
-                  isActive
-                    ? "text-amber-400 text-xl lg:text-2xl transition-all duration-200"
-                    : "text-white hover:scale-105 transition-all duration-200"
-                }
-                key={link.id}
-                to={link.url}
-                onClick={() => setOpen(false)}
-              >
-                {link.text}
-              </NavLink>
-            ))}
-          </div>
-          <SocialMediaIcons className="absolute place-self-center bottom-20 z-100" />
-          <div className="text-sm absolute bottom-0 flex text-center items-center justify-center text-white w-full">
-            <Footer />
-          </div>
-        </motion.div>
-      )}
+            exit={{
+              opacity: 0,
+              x: "-100%",
+              transition: { duration: 0.3, ease: "easeInOut" },
+            }}
+            className="fixed top-0 left-0 w-3/4 h-full bg-black/95 z-50 pt-20"
+          >
+            <div className="h-full flex flex-col">
+              <motion.div
+                animate={{
+                  scale: [0.8, 0.3, 0.8],
+                  transition: { duration: 2, repeat: Infinity },
+                }}
+                className="logo mx-auto mb-4 -mt-10"
+              />
+
+              <div className="flex-1 flex flex-col items-center justify-start gap-8">
+                {NavbarData.map((link) => (
+                  <motion.div
+                    key={link.id}
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                  >
+                    <NavLink
+                      className={({ isActive }) =>
+                        isActive
+                          ? "text-amber-400 text-xl lg:text-2xl"
+                          : "text-white text-xl lg:text-2xl"
+                      }
+                      to={link.url}
+                      onClick={() => setOpen(false)}
+                    >
+                      {link.text}
+                    </NavLink>
+                  </motion.div>
+                ))}
+              </div>
+
+              <div className="pb-72 flex flex-col items-center gap-8">
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.2 }}
+                  className="z-100"
+                >
+                  <SocialMediaIcons />
+                </motion.div>
+
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ delay: 0.3 }}
+                  className="bottom-2 fixed text-center w-full px-4"
+                >
+                  <Footer />
+                </motion.div>
+              </div>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </>
   );
 };

@@ -18,7 +18,7 @@ const SocialMediaIcons = ({className, iconClassName}: Props) => {
                 target="_blank"
                 rel="noopener noreferrer"
                 className={cn(
-                  "text-green-700 p-2 border border-white  rounded-full",
+                  "text-amber-300 p-2 border border-slate-400  rounded-full",
                   iconClassName
                 )}
               >
