@@ -13,15 +13,17 @@ const Navbar = () => {
     <>
       {/* Navbar with clip path */}
       <nav className="-top-10 navMD font-semibold bg-gradient-to-r from-white/0 to-amber-200/20 flex items-center justify-center fixed text-lg md:text-xl text-slate-300 gap-2 md:gap-8 z-10">
-        <NavLink to="/">
+        <div>
           <div className="w-full flex flex-1 justify-between items-center gap-[60vw]">
-            <motion.div
-              animate={{
-                scale: [0.4, 0.3, 0.4],
-                transition: { duration: 2, repeat: Infinity },
-              }}
-              className="logo -mx-8"
-            />
+            <NavLink to="/">
+              <motion.div
+                animate={{
+                  scale: [0.4, 0.3, 0.4],
+                  transition: { duration: 2, repeat: Infinity },
+                }}
+                className="logo -mx-8"
+              />
+            </NavLink>
             <div>
               {!open ? (
                 <Bars3Icon
@@ -36,7 +38,7 @@ const Navbar = () => {
               )}
             </div>
           </div>
-        </NavLink>
+        </div>
       </nav>
 
       {/* Overlay with proper exit animations */}
@@ -68,11 +70,7 @@ const Navbar = () => {
 
               <div className="flex-1 flex flex-col items-center justify-start gap-8">
                 {NavbarData.map((link) => (
-                  <motion.div
-                    key={link.id}
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                  >
+                  <div>
                     <NavLink
                       className={({ isActive }) =>
                         isActive
@@ -84,7 +82,7 @@ const Navbar = () => {
                     >
                       {link.text}
                     </NavLink>
-                  </motion.div>
+                  </div>
                 ))}
               </div>
 
@@ -104,7 +102,7 @@ const Navbar = () => {
                   transition={{ delay: 0.3 }}
                   className="bottom-2 fixed text-center w-full px-4 text-xs"
                 >
-                  <Footer/>
+                  <Footer />
                 </motion.div>
               </div>
             </div>
