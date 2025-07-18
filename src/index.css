@@ -1,5 +1,14 @@
 @import "tailwindcss";
 
+body {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+* {
+    font-family: "Oswald", sans-serif;
+}
+
 @theme inline {
   --animate-first: moveVertical 30s ease infinite;
   --animate-second: moveInCircle 20s reverse infinite;
