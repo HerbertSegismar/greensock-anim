@@ -16,16 +16,18 @@ const navbar = () => {
             }}
             className="logo -mx-8"
           />
-          {!open && (
-            <div className="size-8 text-amber-300">
-              <Bars3Icon onClick={() => setOpen(true)} />
-            </div>
-          )}
-          {open && (
-            <div className="size-8 text-amber-300">
-              <XMarkIcon onClick={() => setOpen(false)} />
-            </div>
-          )}
+          <div>
+            {!open && (
+              <div className="size-8 text-amber-300">
+                <Bars3Icon onClick={() => setOpen(true)} />
+              </div>
+            )}
+            {open && (
+              <div className="size-8 text-amber-300">
+                <XMarkIcon onClick={() => setOpen(false)} />
+              </div>
+            )}
+          </div>
         </div>
       </NavLink>
     </nav>
