@@ -1,5 +1,5 @@
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import NavbarData from "./navbardata";
