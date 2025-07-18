@@ -1,5 +1,5 @@
 
-const footer = () => {
+const Footer = () => {
   return (
     <h1 className="text-sm md:text-lg flex text-center items-center justify-center text-slate-300">
       &nbsp;<span className="text-amber-300">&copy;</span>&nbsp; Copyright{" "}
@@ -8,4 +8,4 @@ const footer = () => {
   );
 }
 
-export default footer
+export default Footer

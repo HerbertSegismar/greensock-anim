@@ -18,7 +18,7 @@ const SocialMediaIcons = ({className, iconClassName}: Props) => {
                 target="_blank"
                 rel="noopener noreferrer"
                 className={cn(
-                  "hoverEffect hover:text-lightGreen  p-2 border border-white hover:border-lightGreen rounded-full",
+                  "text-green-700 p-2 border border-white  rounded-full",
                   iconClassName
                 )}
               >

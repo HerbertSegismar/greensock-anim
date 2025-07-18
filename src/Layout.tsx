@@ -9,9 +9,8 @@ interface LayoutProps {
   children: ReactNode;
 }
 
-function Layout({ children }: LayoutProps) {
+function Layout({ children}: LayoutProps) {
 
-  
   return (
     <div className="flex flex-col min-h-screen">
       <div className="md:hidden flex items-center justify-center">
@@ -25,7 +24,9 @@ function Layout({ children }: LayoutProps) {
       </div>
       <main className="flex-1 flex flex-col items-center justify-center">
         <div className="">
-          <BackgroundGradientAnimation>{children}</BackgroundGradientAnimation>
+          <BackgroundGradientAnimation>
+            {children}
+          </BackgroundGradientAnimation>
         </div>
       </main>
       <div className="text-sm md:text-lg flex text-center items-center justify-center text-slate-300 bg-purple-900">
