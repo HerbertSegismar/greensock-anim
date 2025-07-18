@@ -69,8 +69,7 @@ const Navbar = () => {
             {/* Semi-transparent overlay */}
             <motion.div
               key="overlay"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 0.5 }}
+              animate={{ opacity: [0, 0.5] }}
               exit={{ opacity: 0 }}
               transition={{ duration: 0.2 }}
               className="fixed inset-0 bg-black z-40"
@@ -81,10 +80,9 @@ const Navbar = () => {
             <motion.div
               key="navbar-overlay"
               ref={sidebarRef}
-              initial={{ opacity: 0, x: "-100%" }}
               animate={{
-                opacity: 1,
-                x: 0,
+                opacity: [0, 1],
+                x: ["-100%", "0%"],
                 transition: { type: "spring", stiffness: 300, damping: 25 },
               }}
               exit={{
@@ -92,7 +90,7 @@ const Navbar = () => {
                 x: "-100%",
                 transition: { duration: 0.3, ease: "easeInOut" },
               }}
-              className="fixed top-0 left-0 w-3/4 h-full bg-black/95 z-50 pt-20"
+              className="fixed top-0 left-0 w-3/4 h-full bg-black/90 z-50 pt-20"
             >
               <div className="h-full flex flex-col">
                 <motion.div
