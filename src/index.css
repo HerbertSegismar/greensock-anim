@@ -81,3 +81,8 @@
   clip-path: path("M0 0 1200 0 1200 70 Q1200 150 1090 150 570 150 550 220 550 150 0 150Z");
   transform-origin: center;
 }
+
+.navSM {
+  width: screen;
+  height: 10vh;
+}
