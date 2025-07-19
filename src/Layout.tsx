@@ -25,7 +25,7 @@ function Layout({ children}: LayoutProps) {
       <main className="flex-1 flex flex-col items-center justify-center">
         <div className="">
           <BackgroundGradientAnimation>
-            {children}
+            <div className="relative z-50">{children}</div>
           </BackgroundGradientAnimation>
         </div>
       </main>

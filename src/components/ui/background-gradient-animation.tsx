@@ -14,7 +14,7 @@ export const BackgroundGradientAnimation = ({
   blendingValue = "hard-light",
   children,
   className,
-  interactive = true,
+  interactive = false,
   containerClassName,
 }: {
   gradientBackgroundStart?: string;
@@ -91,6 +91,7 @@ export const BackgroundGradientAnimation = ({
         "h-screen w-screen relative overflow-hidden top-0 left-0 bg-[linear-gradient(40deg,var(--gradient-background-start),var(--gradient-background-end))]",
         containerClassName
       )}
+      style={{ zIndex: 0 }}
     >
       <svg className="hidden">
         <defs>

@@ -10,6 +10,8 @@ import Projects from "./components/projects";
 import Contact from "./components/contact";
 import About from "./components/about";
 import Layout from "./Layout";
+import Globe from "./components/globe";
+import NotFound from "./components/notFound";
 
 const App = () => {
   const router = createBrowserRouter(
@@ -19,6 +21,8 @@ const App = () => {
         <Route path="projects" element={<Projects />} />
         <Route path="contact" element={<Contact />} />
         <Route path="about" element={<About />} />
+        <Route path="globe" element={<Globe />} />
+        <Route path="*" element={<NotFound />} />
       </Route>
     )
   );
