@@ -52,7 +52,7 @@ function Home() {
         className=" flex items-center justify-center text-sm md:text-lg text-slate-300 drop-shadow-xl text-center bg-purple-900/40 w-96 h-24 rounded-2xl"
         style={{ marginTop: "100px" }}
       >
-        <p>
+        <p className="mx-4">
           The text animation uses "motion" library formerly framer-motion, while
           the heart animation uses GSAP.
         </p>
