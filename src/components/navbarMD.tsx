@@ -19,7 +19,7 @@ const navbar = () => {
       <div className="hidden md:flex gap-8">
         {NavbarData.map((link) => (
           <NavLink
-            className={({ isActive }) =>
+            className={({ isActive }: { isActive: boolean }) =>
               isActive
                 ? "text-amber-400 text-xl lg:text-2xl transition-all duration-200"
                 : "hover:scale-105 transition-all duration-200"

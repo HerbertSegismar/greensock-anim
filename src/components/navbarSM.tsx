@@ -105,7 +105,7 @@ const Navbar = () => {
                   {NavbarData.map((link) => (
                     <div key={link.url}>
                       <NavLink
-                        className={({ isActive }) =>
+                        className={({ isActive }: { isActive: boolean }) =>
                           isActive
                             ? "text-amber-400 text-xl lg:text-2xl"
                             : "text-white text-xl lg:text-2xl"
