@@ -13,6 +13,7 @@ const about = () => {
       x: 300,
       rotation: 360,
       duration: 3,
+      backgroundColor: "oklch(100% 1 320)",
       ease: "power1.in",
       yoyo: true,
       repeat: 2,
@@ -44,7 +45,7 @@ const about = () => {
     <div className="h-screen w-full flex flex-col z-100 items-center justify-center">
       <div
         id="shape"
-        className="size-20 bg-amber-300 text-amber-300 text-5xl font-bold"
+        className="size-20"
       ></div>
     </div>
   );
