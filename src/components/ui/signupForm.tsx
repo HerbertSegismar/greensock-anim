@@ -8,7 +8,6 @@ import {
   IconBrandGoogle,
   IconBrandGmail,
 } from "@tabler/icons-react";
-import { scale } from "motion/react";
 
 export function SignupForm() {
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
