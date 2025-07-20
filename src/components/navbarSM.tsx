@@ -5,6 +5,7 @@ import { NavLink } from "react-router-dom";
 import NavbarData from "./navbardata";
 import SocialMediaIcons from "./SocialMediaIcons";
 import Footer from "../components/footer.tsx";
+import Globe from "./globe";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
@@ -118,7 +119,9 @@ const Navbar = () => {
                     </div>
                   ))}
                 </div>
-
+                <div className="absolute -z-100 rounded-full" style={{right: "0%", top: "33%"}}>
+                  <Globe />
+                </div>
                 <div className="pb-72 flex flex-col items-center gap-8">
                   <motion.div
                     initial={{ opacity: 0, y: 20 }}

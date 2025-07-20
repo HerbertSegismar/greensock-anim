@@ -19,11 +19,7 @@ const links = [
     url: "/contact",
     text: "Contact",
   },
-  {
-    id: 5,
-    url: "/globe",
-    text: "Globe",
-  },
+  
 ];
 
 export default links

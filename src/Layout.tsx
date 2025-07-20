@@ -12,7 +12,7 @@ interface LayoutProps {
 function Layout({ children}: LayoutProps) {
 
   return (
-    <div className="flex flex-col min-h-screen">
+    <div className="flex flex-col min-h-screen overflow-y-auto">
       <div className="md:hidden flex items-center justify-center">
         <NavbarSM />
       </div>
@@ -23,13 +23,15 @@ function Layout({ children}: LayoutProps) {
         <NavbarLG />
       </div>
       <main className="flex-1 flex flex-col items-center justify-center">
-        <div className="">
+        <div className="overflow-y-scroll">
           <BackgroundGradientAnimation>
             <div className="relative z-50">{children}</div>
           </BackgroundGradientAnimation>
         </div>
       </main>
-      <div className="text-sm md:text-lg flex text-center items-center justify-center text-slate-300 bg-purple-900">
+      <div 
+      style={{bottom: 0}}
+      className="text-sm md:text-lg flex text-center items-center justify-center text-slate-300 bg-purple-900">
         <Footer />
       </div>
     </div>
