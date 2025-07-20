@@ -1,9 +1,9 @@
-import NavbarSM from "./components/navbarSM.tsx";
-import NavbarMD from "./components/navbarMD.tsx";
-import NavbarLG from "./components/navbarLG.tsx";
-import Footer from "./components/footer.tsx";
+import NavbarSM from "./components/navbarSM";
+import NavbarMD from "./components/navbarMD";
+import NavbarLG from "./components/navbarLG";
+import Footer from "./components/footer";
 import type { ReactNode } from "react";
-import BackgroundGradientAnimation from "./components/ui/background-gradient-animation.tsx";
+import BackgroundGradientAnimation from "./components/ui/background-gradient-animation";
 
 interface LayoutProps {
   children: ReactNode;
@@ -22,7 +22,7 @@ function Layout({ children}: LayoutProps) {
       <div className="hidden lg:flex items-center justify-center">
         <NavbarLG />
       </div>
-      <main className="flex-1 flex flex-col items-center justify-center">
+      <main className="flex flex-col items-center justify-center">
         <div className="overflow-y-scroll">
           <BackgroundGradientAnimation>
             <div className="relative z-50">{children}</div>
@@ -31,7 +31,7 @@ function Layout({ children}: LayoutProps) {
       </main>
       <div 
       style={{bottom: 0}}
-      className="text-sm md:text-lg flex text-center items-center justify-center text-slate-300 bg-purple-900">
+      className="text-sm md:text-lg flex items-center justify-center text-slate-300 bg-purple-900">
         <Footer />
       </div>
     </div>
