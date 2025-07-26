@@ -31,7 +31,7 @@ function Layout({ children}: LayoutProps) {
       </main>
       <div 
       style={{bottom: 0}}
-      className="text-sm md:text-lg flex items-center justify-center text-slate-300 bg-purple-900">
+      className="text-sm md:text-lg flex items-center justify-center text-slate-300 bg-gradient-to-r from-violet-900 to-blue-900">
         <Footer />
       </div>
     </div>

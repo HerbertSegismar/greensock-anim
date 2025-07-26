@@ -34,7 +34,7 @@ const Navbar = () => {
   return (
     <>
       {/* Navbar with clip path */}
-      <nav className="-top-10 navMD font-semibold bg-gradient-to-r from-white/0 to-amber-200/20 flex items-center justify-center fixed text-lg md:text-xl text-slate-300 gap-2 md:gap-8 z-10">
+      <nav className="-top-10 navMD font-semibold bg-gradient-to-r from-white/0 to-amber-200/20 flex items-center justify-center fixed text-lg md:text-xl text-slate-300 gap-2 md:gap-8 z-1">
         <div>
           <div className="w-full flex flex-1 justify-between items-center gap-[60vw]">
             <NavLink to="/">
