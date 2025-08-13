@@ -85,19 +85,16 @@ body {
 
 .navSM {
   width: 600px;
-  height: 170px;
+  height: 130px;
   clip-path: path(
-    "M0 0 600 0 600 70 Q600 120 550 120 270 120 250 170 250 120 0 120Z"
-  );
-  transform-origin: center;
+    "M0 0 600 0 600 30 Q600 80 550 80 270 80 250 130 250 80 0 80Z"
+  )
 }
 
 .navLG {
   width: 600px;
-  height: 170px;
+  height: 130px;
   clip-path: path(
-    "M0 0 600 0 600 70 Q600 120 550 120 270 120 250 170 250 120 0 120Z"
+    "M0 0 600 0 600 30 Q600 80 550 80 270 80 250 130 250 80 0 80Z"
   );
-  transform-origin: center;
-  transform: scale(1.2);
 }

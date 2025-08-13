@@ -33,35 +33,38 @@ const Navbar = () => {
 
   return (
     <>
-      {/* Navbar with clip path */}
-      <nav className="fixed -top-10 navSM bg-gradient-to-r from-white/0 to-black/40 flex items-center justify-center z-10">
+      <motion.nav
+        whileInView={{ y: [-100, 0] }}
+        transition={{ duration: 1, ease: "easeOut" }}
+        className="sticky top-0 navSM bg-gradient-to-r from-white/0 to-black/40 flex items-center justify-between z-10"
+      >
+        <div className="size-10">
+          <NavLink to="/">
+            <motion.div
+              animate={{
+                scale: [0.4, 0.3, 0.4],
+                transition: { duration: 2, repeat: Infinity },
+              }}
+              className="logo absolute top-0"
+            />
+          </NavLink>
+        </div>
         <div>
-          <div className="w-full flex flex-1 justify-between items-center gap-[60vw]">
-            <NavLink to="/">
-              <motion.div
-                animate={{
-                  scale: [0.4, 0.3, 0.4],
-                  transition: { duration: 2, repeat: Infinity },
-                }}
-                className="logo -mx-8"
+          <div className="pb-10 pr-10">
+            {!open ? (
+              <Bars3Icon
+                className="size-8 text-amber-400 cursor-pointer hover:scale-110 transition-transform"
+                onClick={() => setOpen(true)}
               />
-            </NavLink>
-            <div>
-              {!open ? (
-                <Bars3Icon
-                  className="size-8 text-amber-300 cursor-pointer hover:scale-110 transition-transform"
-                  onClick={() => setOpen(true)}
-                />
-              ) : (
-                <XMarkIcon
-                  className="size-8 text-amber-300 cursor-pointer hover:scale-110 transition-transform"
-                  onClick={() => setOpen(false)}
-                />
-              )}
-            </div>
+            ) : (
+              <XMarkIcon
+                className="size-8 text-amber-400 cursor-pointer hover:scale-110 transition-transform"
+                onClick={() => setOpen(false)}
+              />
+            )}
           </div>
         </div>
-      </nav>
+      </motion.nav>
 
       {/* Overlay with proper exit animations */}
       <AnimatePresence>

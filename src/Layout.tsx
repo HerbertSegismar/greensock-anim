@@ -12,14 +12,12 @@ function Layout({ children }: LayoutProps) {
   return (
     <div className="flex flex-col min-h-screen">
       <BackgroundGradientAnimation>
-        <div className="top-0">
           <div className="md:hidden flex items-center justify-center">
             <NavbarSM />
           </div>
           <div className="hidden md:flex items-center justify-center">
             <Navbar />
           </div>
-        </div>
         <main className="relative z-1 mt-[10%]">{children}</main>
         <footer>
           <Footer />
