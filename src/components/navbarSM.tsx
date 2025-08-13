@@ -2,10 +2,10 @@ import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { AnimatePresence, motion } from "motion/react";
 import { useState, useRef, useEffect } from "react";
 import { NavLink } from "react-router-dom";
-import NavbarData from "./navbardata";
+import NavbarData from "./NavbarData"
 import SocialMediaIcons from "./SocialMediaIcons";
-import Footer from "../components/footer.tsx";
-import Globe from "./globe";
+import Footer from "./Footer";
+import Globe from "./Globe";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
@@ -33,35 +33,38 @@ const Navbar = () => {
 
   return (
     <>
-      {/* Navbar with clip path */}
-      <nav className="-top-10 navMD font-semibold bg-gradient-to-r from-white/0 to-amber-200/20 flex items-center justify-center fixed text-lg md:text-xl text-slate-300 gap-2 md:gap-8 z-1">
+      <motion.nav
+        whileInView={{ y: [-100, 0] }}
+        transition={{ duration: 1, ease: "easeOut" }}
+        className="sticky top-0 navSM bg-gradient-to-r from-white/0 to-black/40 flex items-center justify-between z-10"
+      >
+        <div className="size-10">
+          <NavLink to="/">
+            <motion.div
+              animate={{
+                scale: [0.4, 0.3, 0.4],
+                transition: { duration: 2, repeat: Infinity },
+              }}
+              className="logo absolute top-0"
+            />
+          </NavLink>
+        </div>
         <div>
-          <div className="w-full flex flex-1 justify-between items-center gap-[60vw]">
-            <NavLink to="/">
-              <motion.div
-                animate={{
-                  scale: [0.4, 0.3, 0.4],
-                  transition: { duration: 2, repeat: Infinity },
-                }}
-                className="logo -mx-8"
+          <div className="pb-10 pr-10">
+            {!open ? (
+              <Bars3Icon
+                className="size-8 text-amber-400 cursor-pointer hover:scale-110 transition-transform"
+                onClick={() => setOpen(true)}
               />
-            </NavLink>
-            <div>
-              {!open ? (
-                <Bars3Icon
-                  className="size-8 text-amber-300 cursor-pointer hover:scale-110 transition-transform"
-                  onClick={() => setOpen(true)}
-                />
-              ) : (
-                <XMarkIcon
-                  className="size-8 text-amber-300 cursor-pointer hover:scale-110 transition-transform"
-                  onClick={() => setOpen(false)}
-                />
-              )}
-            </div>
+            ) : (
+              <XMarkIcon
+                className="size-8 text-amber-400 cursor-pointer hover:scale-110 transition-transform"
+                onClick={() => setOpen(false)}
+              />
+            )}
           </div>
         </div>
-      </nav>
+      </motion.nav>
 
       {/* Overlay with proper exit animations */}
       <AnimatePresence>
@@ -119,7 +122,10 @@ const Navbar = () => {
                     </div>
                   ))}
                 </div>
-                <div className="absolute -z-100 rounded-full" style={{right: "0%", top: "33%"}}>
+                <div
+                  className="absolute -z-100 rounded-full"
+                  style={{ right: "0%", top: "33%" }}
+                >
                   <Globe />
                 </div>
                 <div className="pb-72 flex flex-col items-center gap-8">

@@ -5,12 +5,12 @@ import {
   RouterProvider,
   Outlet,
 } from "react-router-dom";
-import Home from "./components/home";
-import Projects from "./components/projects";
-import Contact from "./components/contact";
-import About from "./components/about";
+import Home from "./components/Home";
+import Projects from "./components/Projects";
+import Contact from "./components/Contact";
+import About from "./components/About";
 import Layout from "./Layout";
-import NotFound from "./components/notFound";
+import NotFound from "./components/NotFound";
 
 const App = () => {
   const router = createBrowserRouter(

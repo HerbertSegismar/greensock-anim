@@ -1,4 +1,4 @@
-const links = [
+const NavbarData = [
   {
     id: 1,
     url: "/",
@@ -22,4 +22,4 @@ const links = [
   
 ];
 
-export default links
+export default NavbarData

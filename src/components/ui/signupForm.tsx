@@ -16,9 +16,9 @@ export function SignupForm() {
     console.log("Form submitted");
   };
   return (
-    <div className="min-h-screen flex flex-grow items-start justify-center p-4 overflow-y-auto scale-90 md:scale-100 translate-y-5 md:translate-y-20 z-10">
+    <div className="min-h-screen flex flex-grow items-start justify-center p-4 overflow-y-auto scale-90 md:scale-100 translate-y-5 md:translate-y-20">
       <div
-        className="shadow-input rounded-xl w-full max-w-md px-6 py-8 md:px-8 md:py-12 dark:bg-black/80 my-20"
+        className="shadow-input rounded-xl w-full max-w-md px-6 py-8 md:px-8 md:py-12 dark:bg-black/80 my-0"
       >
         <h2 className="text-xl font-bold text-neutral-800 mb-2 dark:text-amber-300 uppercase text-center">
           Login Form
