@@ -2,10 +2,10 @@ import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { AnimatePresence, motion } from "motion/react";
 import { useState, useRef, useEffect } from "react";
 import { NavLink } from "react-router-dom";
-import NavbarData from "./navbardata";
+import NavbarData from "./NavbarData"
 import SocialMediaIcons from "./SocialMediaIcons";
-import Footer from "../components/footer.tsx";
-import Globe from "./globe";
+import Footer from "./Footer";
+import Globe from "./Globe";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
@@ -34,7 +34,7 @@ const Navbar = () => {
   return (
     <>
       {/* Navbar with clip path */}
-      <nav className="-top-10 navMD font-semibold bg-gradient-to-r from-white/0 to-amber-200/20 flex items-center justify-center fixed text-lg md:text-xl text-slate-300 gap-2 md:gap-8 z-1">
+      <nav className="fixed -top-10 navSM bg-gradient-to-r from-white/0 to-black/40 flex items-center justify-center z-10">
         <div>
           <div className="w-full flex flex-1 justify-between items-center gap-[60vw]">
             <NavLink to="/">
@@ -119,7 +119,10 @@ const Navbar = () => {
                     </div>
                   ))}
                 </div>
-                <div className="absolute -z-100 rounded-full" style={{right: "0%", top: "33%"}}>
+                <div
+                  className="absolute -z-100 rounded-full"
+                  style={{ right: "0%", top: "33%" }}
+                >
                   <Globe />
                 </div>
                 <div className="pb-72 flex flex-col items-center gap-8">

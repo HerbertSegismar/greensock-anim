@@ -1,4 +1,4 @@
-import Heart from "./heart.tsx";
+import Heart from "./Heart.tsx";
 import { useRef } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
